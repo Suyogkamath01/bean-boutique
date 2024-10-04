@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Selection - Bean Boutique Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking External CSS -->
+    <style>
+        /* Additional CSS for Product Images */
+        .product {
+            border: 1px solid #ccc; /* Optional: Border around each product */
+            border-radius: 10px; /* Rounded corners */
+            padding: 1rem; /* Space around content */
+            margin: 1rem; /* Space between products */
+            text-align: center; /* Center align text */
+            background-color: #fff; /* White background for products */
+            width: calc(30% - 2rem); /* Responsive width for products */
+            display: flex; /* Flexbox for content alignment */
+            flex-direction: column; /* Stack items vertically */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .product-image {
+            width: 100%; /* Full width of the product div */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Maintain aspect ratio and cover */
+            border-radius: 10px; /* Rounded corners for images */
+            margin-bottom: 0.5rem; /* Space between image and text */
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping of products */
+            justify-content: center; /* Center products in the container */
+        }
+    </style>
+</head>
+<body class="coffee-selection"> <!-- Class for Coffee Selection Page -->
+
+    <header>
+        <div class="logo-container">
+            <img src="https://freepngimg.com/download/coffee/33957-5-coffee-logo-transparent-background.png" alt="Bean Boutique Logo" class="logo">
+            <h1>Coffee Selection</h1> <!-- Page Title -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Coffee Selection</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="offers.html">Special Offers</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for coffee..." onkeyup="filterProducts()">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <h2>Our Unique Blends & Single-Origin Coffees</h2>
+
+            <!-- Coffee Products -->
+            <div class="product" data-name="Sumatra Mandheling">
+                <img src="https://www.extraingredient.com/uploads/coffee-sumatra-mandheling.jpg" alt="Sumatra Mandheling" class="product-image">
+                <h3>Sumatra Mandheling</h3>
+                <p><strong>Description:</strong> Hailing from the lush volcanic slopes of Indonesia, this coffee offers a full-bodied flavor with earthy and herbal notes. It’s a favorite among those who enjoy a rich, heavy cup.</p>
+                <p><strong>Tasting Notes:</strong> Dark chocolate, herbal undertones, and a smooth finish.</p>
+                <p><strong>Recommended Brewing Methods:</strong> French press, pour-over, or cold brew.</p>
+            </div>
+            <div class="product" data-name="Kenya AA">
+                <img src="images/kenya-aa.jpg" alt="Kenya AA" class="product-image">
+                <h3>Kenya AA</h3>
+                <p><strong>Description:</strong> Known for its vibrant acidity and complex flavor profile, this coffee boasts bright notes of berry and citrus. A truly refreshing cup that’s perfect for a morning boost!</p>
+                <p><strong>Tasting Notes:</strong> Berry sweetness, citrus zest, and a bright, clean finish.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or Aeropress for the best extraction of flavors.</p>
+            </div>
+            <div class="product" data-name="Ethiopian Yirgacheffe">
+                <img src="images/ethiopian-yirgacheffe.jpg" alt="Ethiopian Yirgacheffe" class="product-image">
+                <h3>Ethiopian Yirgacheffe</h3>
+                <p><strong>Description:</strong> This coffee is often regarded as one of the finest in the world, characterized by its light body and floral aroma. It’s like drinking a cup of nature’s bouquet!</p>
+                <p><strong>Tasting Notes:</strong> Jasmine, lemon, and a silky mouthfeel.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or Chemex to highlight its delicate flavors.</p>
+            </div>
+            <div class="product" data-name="Guatemalan Antigua">
+                <img src="images/guatemalan-antigua.jpg" alt="Guatemalan Antigua" class="product-image">
+                <h3>Guatemalan Antigua</h3>
+                <p><strong>Description:</strong> Grown in the volcanic soils of Antigua, this coffee offers a rich and spicy flavor with hints of cocoa. A delightful choice for anyone who loves a well-rounded cup!</p>
+                <p><strong>Tasting Notes:</strong> Cocoa, nutmeg, and a hint of caramel sweetness.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Drip coffee maker or French press for a balanced extraction.</p>
+            </div>
+            <div class="product" data-name="Brazilian Santos">
+                <img src="images/brazilian-santos.jpg" alt="Brazilian Santos" class="product-image">
+                <h3>Brazilian Santos</h3>
+                <p><strong>Description:</strong> This smooth, low-acidity coffee is known for its nutty and sweet flavors, making it an excellent choice for everyday drinking. It’s a crowd-pleaser!</p>
+                <p><strong>Tasting Notes:</strong> Nutty, sweet chocolate, and a creamy body.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Espresso or drip brewing for a well-rounded cup.</p>
+            </div>
+            <div class="product" data-name="Colombian Supremo">
+                <img src="images/colombian-supremo.jpg" alt="Colombian Supremo" class="product-image">
+                <h3>Colombian Supremo</h3>
+                <p><strong>Description:</strong> Grown in the highlands of Colombia, this coffee is known for its smooth, mild flavor and rich aroma. It’s a staple for coffee lovers worldwide.</p>
+                <p><strong>Tasting Notes:</strong> Caramel, nutty, and a pleasant sweetness.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Drip coffee maker or pour-over for a classic taste.</p>
+            </div>
+            <div class="product" data-name="India Monsooned Malabar">
+                <img src="images/india-monsooned-malabar.jpg" alt="India Monsooned Malabar" class="product-image">
+                <h3>India Monsooned Malabar</h3>
+                <p><strong>Description:</strong> This unique coffee undergoes a special monsooning process, giving it a distinctive flavor. It’s earthy, spicy, and full-bodied, perfect for adventurous coffee drinkers.</p>
+                <p><strong>Tasting Notes:</strong> Spicy, woody, and a rich, creamy body.</p>
+                <p><strong>Recommended Brewing Methods:</strong> French press or espresso.</p>
+            </div>
+            <div class="product" data-name="Nicaragua Matagalpa">
+                <img src="images/nicaragua-matagalpa.jpg" alt="Nicaragua Matagalpa" class="product-image">
+                <h3>Nicaragua Matagalpa</h3>
+                <p><strong>Description:</strong> With its bright acidity and sweet flavor, this coffee from Matagalpa offers delightful citrus notes. It’s a refreshing choice for those hot summer days.</p>
+                <p><strong>Tasting Notes:</strong> Citrus, caramel, and a bright finish.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or Aeropress to accentuate its brightness.</p>
+            </div>
+            <div class="product" data-name="Puerto Rico Yauco">
+                <img src="images/puerto-rico-yauco.jpg" alt="Puerto Rico Yauco" class="product-image">
+                <h3>Puerto Rico Yauco</h3>
+                <p><strong>Description:</strong> Grown in the mountainous regions of Puerto Rico, this coffee has a medium body and well-balanced acidity. It’s known for its sweet, fruity notes.</p>
+                <p><strong>Tasting Notes:</strong> Honey, cherry, and a pleasant acidity.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Drip coffee maker or pour-over for an even extraction.</p>
+            </div>
+            <div class="product" data-name="Ethiopian Djimma">
+                <img src="images/ethiopian-djimma.jpg" alt="Ethiopian Djimma" class="product-image">
+                <h3>Ethiopian Djimma</h3>
+                <p><strong>Description:</strong> This Ethiopian coffee is known for its complex flavor profile with fruity and floral notes. It’s perfect for those who enjoy unique, vibrant coffees.</p>
+                <p><strong>Tasting Notes:</strong> Blueberry, floral, and a wine-like acidity.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or French press.</p>
+            </div>
+            <div class="product" data-name="Solomon Islands">
+                <img src="images/solomon-islands.jpg" alt="Solomon Islands" class="product-image">
+                <h3>Solomon Islands</h3>
+                <p><strong>Description:</strong> This coffee is rich and full-bodied, with notes of dark chocolate and spice. It’s a unique choice for coffee lovers looking for something different.</p>
+                <p><strong>Tasting Notes:</strong> Dark chocolate, spice, and a smooth finish.</p>
+                <p><strong>Recommended Brewing Methods:</strong> French press or espresso.</p>
+            </div>
+            <div class="product" data-name="Jamaican Blue Mountain">
+                <img src="images/jamaican-blue-mountain.jpg" alt="Jamaican Blue Mountain" class="product-image">
+                <h3>Jamaican Blue Mountain</h3>
+                <p><strong>Description:</strong> Renowned for its smoothness and lack of bitterness, this coffee is often regarded as one of the best in the world. A luxury coffee experience!</p>
+                <p><strong>Tasting Notes:</strong> Sweet, smooth, and floral.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or Chemex to enjoy its delicate flavors.</p>
+            </div>
+            <div class="product" data-name="Tanzania Peaberry">
+                <img src="images/tanzania-peaberry.jpg" alt="Tanzania Peaberry" class="product-image">
+                <h3>Tanzania Peaberry</h3>
+                <p><strong>Description:</strong> This unique coffee consists of a single rounded bean and has a bright acidity with a fruity flavor. It’s a delightful choice for coffee enthusiasts.</p>
+                <p><strong>Tasting Notes:</strong> Citrus, berry, and a bright finish.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or Aeropress for the best flavor extraction.</p>
+            </div>
+            <div class="product" data-name="Peruvian Organic">
+                <img src="images/peruvian-organic.jpg" alt="Peruvian Organic" class="product-image">
+                <h3>Peruvian Organic</h3>
+                <p><strong>Description:</strong> Grown in the high altitudes of Peru, this organic coffee is known for its smooth flavor and rich aroma. A great choice for the environmentally-conscious coffee lover.</p>
+                <p><strong>Tasting Notes:</strong> Nutty, smooth, and sweet.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Drip coffee maker or French press.</p>
+            </div>
+            <div class="product" data-name="Honduran Coffee">
+                <img src="images/honduran-coffee.jpg" alt="Honduran Coffee" class="product-image">
+                <h3>Honduran Coffee</h3>
+                <p><strong>Description:</strong> This coffee is known for its mild flavor with a hint of sweetness. It’s a well-balanced cup that’s perfect for everyday drinking.</p>
+                <p><strong>Tasting Notes:</strong> Chocolate, caramel, and a smooth body.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Drip coffee maker or pour-over.</p>
+            </div>
+            <div class="product" data-name="Costa Rican Coffee">
+                <img src="images/costa-rican-coffee.jpg" alt="Costa Rican Coffee" class="product-image">
+                <h3>Costa Rican Coffee</h3>
+                <p><strong>Description:</strong> Known for its bright acidity and full-bodied flavor, this coffee offers a delightful taste experience with every sip.</p>
+                <p><strong>Tasting Notes:</strong> Lemon, honey, and a smooth finish.</p>
+                <p><strong>Recommended Brewing Methods:</strong> Pour-over or Aeropress for the best flavor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-info">
+            <p><strong>Contact Us</strong></p>
+            <p>Email: <a href="mailto:info@beanboutique.com">info@beanboutique.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p>Address: 123 Coffee Street, Brew City, CO 45678</p>
+        </section>
+        <div class="copyright">
+            <p>&copy; 2024 Bean Boutique Coffee Shop</p>
+        </div>
+    </footer>
+
+</body>
+</html>

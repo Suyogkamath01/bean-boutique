@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bean Boutique Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking External CSS -->
+</head>
+<body class="home"> <!-- Added the home class to the body -->
+
+    <!-- Modal Popup for first-time visitors -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to Bean Boutique!</h2>
+            <p>Sign up to get a 10% discount on your first purchase!</p>
+            <form id="signupForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://freepngimg.com/download/coffee/33957-5-coffee-logo-transparent-background.png" alt="Bean Boutique Logo" class="logo"> <!-- Placeholder logo -->
+            <h1>Welcome to Bean Boutique</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Coffee Selection</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="offers.html">Special Offers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section with Enticing Coffee Images -->
+    <section class="main">
+        <div class="hero">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Coffee_Beans_Photographed_in_Macro.jpg" alt="Coffee Beans" class="featured-image">
+            <img src="https://images.philips.com/is/image/philipsconsumer/68c3b06e2a0342deb966ad1f01186f84?$jpglarge$&wid=1250" alt="Espresso Machine" class="featured-image">
+            <img src="https://cdn9.dissolve.com/p/D2012_136_043/D2012_136_043_1200.jpg" alt="People Enjoying Coffee" class="featured-image">
+        </div>
+
+        <!-- Slideshow for Featured Products -->
+        <section class="slideshow-section">
+            <h2>Featured Products!</h2>
+            <div class="slideshow-container" id="products-slideshow">
+                <div class="slides">
+                    <img src="images/product1.jpg" alt="Coffee Blend 1">
+                    <div class="text">Special Blend 1</div>
+                </div>
+                <div class="slides">
+                    <img src="images/product2.jpg" alt="Coffee Blend 2">
+                    <div class="text">Unique Blend 2</div>
+                </div>
+                <div class="slides">
+                    <img src="images/product3.jpg" alt="Brewing Equipment">
+                    <div class="text">Top Brewing Equipment</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slideshow for Featured Events -->
+        <section class="slideshow-section">
+            <h2>Upcoming Events!</h2>
+            <div class="slideshow-container" id="events-slideshow">
+                <div class="slides">
+                    <img src="https://athome.starbucks.com/sites/default/files/2021-09/COFFEE-TASTING_4119_0.jpg" alt="Coffee Tasting Event">
+                    <div class="text">Coffee Tasting Event</div>
+                </div>
+                <div class="slides">
+                    <img src="https://en.bugancoffeelab.com/cdn/shop/products/BC_036.jpg?v=1606239401" alt="Brewing Workshop">
+                    <div class="text">Brewing Workshop</div>
+                </div>
+                <div class="slides">
+                    <img src="https://www.kaffebox.no/wp-content/uploads/2023/04/329214741_214088044443372_641635808443734248_n-e1682497569228.jpg" alt="Meet the Roaster">
+                    <div class="text">Meet the Roaster</div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Story of the Company with Enhanced Styling -->
+    <section class="story-section">
+        <h2>Our Story</h2>
+        <p>
+            Established in 2010 in the heart of the community, Bean Boutique was born out of a passion for coffee and a desire to bring people together. Over the years, we’ve grown from a small neighborhood coffee shop to a beloved brand, known for our unique blends, top-quality brewing equipment, and a warm, welcoming environment.
+        </p>
+        <p>
+            Our mission is simple: to serve the best coffee while fostering a sense of community. Whether you're grabbing a cup on the go, attending one of our popular coffee-tasting events, or learning the art of brewing, we are here to share our love of coffee with the world.
+        </p>
+    </section>
+
+    <!-- Interactive Google Map -->
+    <section class="location">
+        <h2 style="font-size: 1.5rem;">Find Us Here</h2> <!-- Smaller Title -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151!2d144.96316!3d-37.81363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12345abcde12345!2sBean+Boutique+Coffee!5e0!3m2!1sen!2sin!4v1600000000" 
+            width="100%" 
+            height="350" 
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen="" 
+            aria-hidden="false" 
+            tabindex="0"></iframe>
+    </section>
+
+    <!-- Social Media Links -->
+    <section class="social-media">
+        <h2>Connect with Us</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com">
+                <img src="https://i.pinimg.com/originals/71/72/16/7172161b580470deb78078669236d2c1.jpg" alt="Instagram" class="social-logo">
+                Instagram
+            </a>
+            <a href="https://www.x.com">
+                <img src="https://toppng.com/public/uploads/preview/twitter-x-new-logo-round-icon-png-11692480241tdbz6jparr.webp" alt="X" class="social-logo">
+                X
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="https://www.freeiconspng.com/uploads/facebook-logo-3.png" alt="Facebook" class="social-logo">
+                Facebook
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact us Along with Footer -->
+    <footer>
+        <section class="footer-info">
+            <p><strong>Contact Us</strong></p>
+            <p>Email: <a href="mailto:info@beanboutique.com">info@beanboutique.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p>Address: 123 Coffee Street, Brew City, CO 45678</p>
+        </section>
+        <div class="copyright">
+            <p>&copy; 2024 Bean Boutique Coffee Shop</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Slideshow and Modal -->
+    <script>
+        // Modal Popup Logic
+        const modal = document.getElementById("welcomeModal");
+        const closeBtn = document.querySelector(".close");
+        const signupForm = document.getElementById("signupForm");
+
+        // Check if the user has already subscribed
+        if (!localStorage.getItem("subscribed")) {
+            setTimeout(() => {
+                modal.style.display = "block"; // Show the modal after 3 seconds
+            }, 3000);
+        }
+
+        // Close the modal when the user clicks the close button
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when the user clicks outside the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle the sign-up form submission
+        signupForm.onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission to server
+            modal.style.display = "none"; // Hide the modal
+
+            // Mark the user as subscribed
+            localStorage.setItem("subscribed", "true");
+        };
+
+        // Slideshow Logic for Products and Events
+        let productSlideIndex = 0;
+        let eventSlideIndex = 0;
+        showSlides('products-slideshow', productSlideIndex);
+        showSlides('events-slideshow', eventSlideIndex);
+
+        function showSlides(slideshowId, index) {
+            let slides = document.querySelectorAll(`#${slideshowId} .slides`);
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            index++;
+            if (index >= slides.length) { index = 0; }
+            slides[index].style.display = "block";
+            setTimeout(() => showSlides(slideshowId, index), 4000); // Change image every 4 seconds
+        }
+    </script>
+</body>
+</html>
